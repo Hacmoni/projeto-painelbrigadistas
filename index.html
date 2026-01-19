@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Brigadistas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="painel-header">
+
+        <div class="header-textos">
+            <h1>Hospital Nove de Julho</h1>
+            <h2>Painel de Brigadistas</h2>
+        </div>
+
+        <div class="resumo-brigadistas">
+            <span class="numero" id="totalBrigadistas">0</span>
+            <small>Brigadistas no hospital</small>
+        </div>
+
+        <input type="text" class="campo-busca" placeholder="Buscar por nome, setor, bloco, andar ou matrícula">
+
+    </header>
+
+    <!-- ================= DASHBOARD POR BLOCO ================= -->
+    <section class="dashboard-blocos">
+
+        <div class="card-bloco" data-bloco="Bloco A">
+            <h4>Bloco A</h4>
+            <span class="numero qtd-bloco">0</span>
+            <small>Brigadistas</small>
+        </div>
+
+        <div class="card-bloco" data-bloco="Bloco B">
+            <h4>Bloco B</h4>
+            <span class="numero qtd-bloco">0</span>
+            <small>Brigadistas</small>
+        </div>
+
+        <div class="card-bloco" data-bloco="Bloco C">
+            <h4>Bloco C</h4>
+            <span class="numero qtd-bloco">0</span>
+            <small>Brigadistas</small>
+        </div>
+
+        <div class="card-bloco" data-bloco="Bloco D">
+            <h4>Bloco D</h4>
+            <span class="numero qtd-bloco">0</span>
+            <small>Brigadistas</small>
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MAPA ================= -->
+    <main class="mapa-hospital">
+
+        <!-- ================= BLOCO A ================= -->
+        <section class="torre-predio">
+            <div class="topo-predio">Bloco A</div>
+
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','9º Andar',this)">
+                <span class="andar-nome">9º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','8º Andar', this)">
+                <span class="andar-nome">8º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','7º Andar', this)">
+                <span class="andar-nome">7º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','6º Andar', this)">
+                <span class="andar-nome">6º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','5º Andar', this)">
+                <span class="andar-nome">5º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','4º Andar', this)">
+                <span class="andar-nome">4º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','3º Andar', this)">
+                <span class="andar-nome">3º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','2º Andar', this)">
+                <span class="andar-nome">2º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','1º Andar', this)">
+                <span class="andar-nome">1º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco A','Térreo', this)">
+                <span class="andar-nome">Térreo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco A','3º Subsolo', this)">
+                <span class="andar-nome">3º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco A','4º Subsolo', this)">
+                <span class="andar-nome">4º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+        </section>
+
+        <!-- ================= BLOCO B ================= -->
+        <section class="torre-predio">
+            <div class="topo-predio">Bloco B</div>
+
+            <div class="andar padrao" onclick="abrirAndar('Bloco B','6º Andar', this)">
+                <span class="andar-nome">6º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco B','5º Andar', this)">
+                <span class="andar-nome">5º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco B','4º Andar', this)">
+                <span class="andar-nome">4º Andar</span>
+                <span class="badge-brigadista">7</span>
+            </div>
+            <div class="andar uti" onclick="abrirAndar('Bloco B','3º Andar', this)">
+                <span class="andar-nome">3º Andar</span>
+                <span class="badge-brigadista">4</span>
+            </div>
+            <div class="andar uti" onclick="abrirAndar('Bloco B','2º Andar', this)">
+                <span class="andar-nome">2º Andar</span>
+                <span class="badge-brigadista">5</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco B','1º Andar', this)">
+                <span class="andar-nome">1º Andar</span>
+                <span class="badge-brigadista">6</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco B','Térreo', this)">
+                <span class="andar-nome">Térreo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar cc" onclick="abrirAndar('Bloco B','1º Subsolo', this)">
+                <span class="andar-nome">1º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco B','2º Subsolo', this)">
+                <span class="andar-nome">2º Subsolo</span>
+                <span class="badge-brigadista">2</span>
+            </div>
+            <div class="andar uti" onclick="abrirAndar('Bloco B','3º Subsolo', this)">
+                <span class="andar-nome">3º Subsolo</span>
+                <span class="badge-brigadista">3</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco B','4º Subsolo', this)">
+                <span class="andar-nome">4º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco B','5º Subsolo', this)">
+                <span class="andar-nome">5º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+        </section>
+
+        <!-- ================= BLOCO C ================= -->
+        <section class="torre-predio">
+            <div class="topo-predio">Bloco C</div>
+
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','7º Andar', this)">
+                <span class="andar-nome">7º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','6º Andar', this)">
+                <span class="andar-nome">6º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco C','5º Andar', this)">
+                <span class="andar-nome">5º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar internacao" onclick="abrirAndar('Bloco C','4º Andar', this)">
+                <span class="andar-nome">4º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar uti" onclick="abrirAndar('Bloco C','3º Andar', this)">
+                <span class="andar-nome">3º Andar</span>
+                <span class="badge-brigadista">4</span>
+            </div>
+            <div class="andar uti" onclick="abrirAndar('Bloco C','2º Andar', this)">
+                <span class="andar-nome">2º Andar</span>
+                <span class="badge-brigadista">4</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','1º Andar', this)">
+                <span class="andar-nome">1º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar ps" onclick="abrirAndar('Bloco C','Térreo', this)">
+                <span class="andar-nome">Térreo</span>
+                <span class="badge-brigadista">10</span>
+            </div>
+            <div class="andar cc" onclick="abrirAndar('Bloco C','1º Subsolo', this)">
+                <span class="andar-nome">1º Subsolo</span>
+                <span class="badge-brigadista">8</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','2º Subsolo', this)">
+                <span class="andar-nome">2º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','3º Subsolo', this)">
+                <span class="andar-nome">3º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','4º Subsolo', this)">
+                <span class="andar-nome">4º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','5º Subsolo', this)">
+                <span class="andar-nome">5º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco C','6º Subsolo', this)">
+                <span class="andar-nome">6º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+        </section>
+
+        <!-- ================= BLOCO D ================= -->
+        <section class="torre-predio">
+            <div class="topo-predio">Bloco D</div>
+
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','8º Andar', this)">
+                <span class="andar-nome">8º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','7º Andar', this)">
+                <span class="andar-nome">7º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','6º Andar', this)">
+                <span class="andar-nome">6º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','5º Andar', this)">
+                <span class="andar-nome">5º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','4º Andar', this)">
+                <span class="andar-nome">4º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','3º Andar', this)">
+                <span class="andar-nome">3º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','2º Andar', this)">
+                <span class="andar-nome">2º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','1º Andar', this)">
+                <span class="andar-nome">1º Andar</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar uti" onclick="abrirAndar('Bloco D','Mezanino', this)">
+                <span class="andar-nome">Mezanino</span>
+                <span class="badge-brigadista">2</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','Térreo', this)">
+                <span class="andar-nome">Térreo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','1º Subsolo', this)">
+                <span class="andar-nome">1º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+            <div class="andar padrao" onclick="abrirAndar('Bloco D','2º Subsolo', this)">
+                <span class="andar-nome">2º Subsolo</span>
+                <span class="badge-brigadista">0</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= PAINEL ================= -->
+    <section class="painel-conteudo" id="painelConteudo">
+
+        <!-- BOX BLOCO / ANDAR -->
+        <div class="box-local" id="boxLocal">
+            <span class="local-bloco" id="localBloco">Bloco</span>
+            <span class="local-divisor"></span>
+            <span class="local-andar" id="localAndar">Andar</span>
+        </div>
+
+        <!-- GRID DE BRIGADISTAS -->
+        <div class="grid-brigadistas" id="listaBrigadistas"></div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- ===== MODAL EDITAR BRIGADISTA ===== -->
+    <div class="modal" id="modalEditar">
+        <div class="modal-conteudo">
+            <h3>Editar Brigadista</h3>
+
+            <input type="hidden" id="editMatricula">
+
+            <div class="form-grid">
+
+                <div class="campo full">
+                    <label>Matrícula</label>
+                    <input type="text" id="editMatriculaView" disabled>
+                </div>
+
+                <div class="campo full">
+                    <label>Nome</label>
+                    <input type="text" id="editNome">
+                </div>
+
+                <div class="campo full">
+                    <label>Função</label>
+                    <input type="text" id="editFuncao">
+                </div>
+
+                <div class="campo full">
+                    <label>Setor</label>
+                    <input type="text" id="editSetor">
+                </div>
+
+                <div class="campo">
+                    <label>Bloco</label>
+                    <select id="editBloco" onchange="carregarAndaresEdicao()"></select>
+                </div>
+
+                <div class="campo">
+                    <label>Andar</label>
+                    <select id="editAndar"></select>
+                </div>
+
+                <!-- ✅ UPLOAD + PREVIEW (CORRETO) -->
+                <div class="campo full upload-foto">
+
+                    <label>Foto do brigadista</label>
+
+                    <div class="box-foto">
+                        <div class="upload-acoes">
+                            <label class="btn-upload">
+                                <input type="file" id="editFoto" accept="image/*" onchange="previewFotoEdicao()">
+                                <span>Selecionar foto</span>
+                            </label>
+                        </div>
+                        <div class="preview-wrapper">
+                            <img id="previewFoto" class="preview-foto" src="imagens/avatar-padrao.png"
+                                alt="Preview da foto">
+                            <span class="icone-camera">📷</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-acoes">
+                <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+                <button class="btn-salvar" onclick="salvarEdicao()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

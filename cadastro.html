@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Brigadista</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cadastro de Brigadista</h1>
+        <p class="subtitulo">Preencha os dados abaixo</p>
+
+        <form id="formBrigadista">
+
+            <div class="grupo">
+                <label>Nome completo *</label>
+                <input type="text" name="nome" required>
+            </div>
+
+            <div class="grupo">
+                <label>Matrícula *</label>
+                <input type="text" name="matricula" required>
+            </div>
+
+            <div class="grupo">
+                <label>Função *</label>
+                <input type="text" name="funcao" required>
+            </div>
+
+            <div class="grupo">
+                <label>Setor *</label>
+                <input type="text" name="setor" required>
+            </div>
+
+            <div class="linha">
+
+                <div class="grupo">
+                    <label>Bloco *</label>
+                    <select name="bloco" id="bloco" required>
+                        <option value="">Selecione</option>
+                        <option value="Bloco A">Bloco A</option>
+                        <option value="Bloco B">Bloco B</option>
+                        <option value="Bloco C">Bloco C</option>
+                        <option value="Bloco D">Bloco D</option>
+                    </select>
+                </div>
+
+                <div class="grupo">
+                    <label>Andar *</label>
+                    <select name="andar" id="andar" required disabled>
+                        <option value="">Selecione o bloco primeiro</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="grupo">
+                <label>Foto (opcional)</label>
+                <input type="file" name="foto" accept="image/*">
+            </div>
+
+            <div class="preview">
+                <img id="previewFoto" src="imagens/avatar-padrao.png" alt="Prévia da foto">
+            </div>
+
+            <button type="submit">Salvar Brigadista</button>
+
+            <p class="mensagem" id="mensagem"></p>
+
+        </form>
+    </div>
+
+    <!-- JS SEMPRE NO FINAL -->
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
