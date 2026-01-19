@@ -725,3 +725,10 @@ input:disabled {
             var(--verde-principal),
             transparent);
 }
+
+/* ===== AJUSTE MOBILE DASHBOARD ===== */
+@media (max-width: 768px) {
+    .dashboard-blocos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
