@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Brigadistas - Hospital Nove de Julho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="modo-publico">
+
+    <header class="painel-header">
+        <h1>Hospital Nove de Julho</h1>
+
+        <div class="info-bloco">
+            <h2 id="tituloBloco">Bloco</h2>
+            <span id="totalBloco" class="total-bloco">
+                0 brigadistas
+            </span>
+        </div>
+    </header>
+
+    <div class="coluna-andar" id="listaAndares"></div>
+
+    <div class="painel-conteudo">
+        <div id="listaBrigadistas"></div>
+    </div>
+
+    <script>
+        const MODO_PUBLICO = true;
+    </script>
+    <script src="publico.js"></script>
+
+</body>
+
+</html>
