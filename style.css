@@ -229,9 +229,16 @@ body {
 
 .dashboard-blocos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .dashboard-blocos {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .card-bloco {
@@ -724,11 +731,4 @@ input:disabled {
     background: linear-gradient(to right,
             var(--verde-principal),
             transparent);
-}
-
-/* ===== AJUSTE MOBILE DASHBOARD ===== */
-@media (max-width: 768px) {
-    .dashboard-blocos {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
