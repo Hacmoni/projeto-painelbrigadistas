@@ -758,3 +758,6 @@ input:disabled {
     width: auto !important;
 }
 
+.dashboard-blocos {
+    padding: 15px;
+}
